@@ -10,4 +10,6 @@ class Tarefa < ApplicationRecord
       "finalizada",
     ]
   end
+
+  validates :historia_id, presence: true
 end
