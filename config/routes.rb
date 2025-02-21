@@ -14,10 +14,14 @@ Rails.application.routes.draw do
       get 'search'  #Endpoint para filtros
     end
   end
-  resources :tarefas, only: [:index, :create, :update, :destroy] do
+  resources :tarefa, only: [:index, :create, :update, :destroy] do
     collection do
       get 'search'  #Endpoint para filtros
     end
+
+    get 'tarefa', to: 'tarefa#index'
+    get 'tarefa/search', to: 'tarefa#search'
+
   end
 
 end

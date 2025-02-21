@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_18_165334) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_21_141205) do
   create_table "historia", force: :cascade do |t|
     t.string "titulo"
     t.text "descricao"
@@ -35,6 +35,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_18_165334) do
     t.integer "status_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "nome"
     t.index ["historia_id"], name: "index_tarefas_on_historia_id"
     t.index ["status_id"], name: "index_tarefas_on_status_id"
   end

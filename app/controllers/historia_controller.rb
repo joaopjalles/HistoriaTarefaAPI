@@ -18,7 +18,7 @@ class HistoriaController < ApplicationController
   end
 
   def update
-    @historia = Historia.find(params[:id])
+    @historia = Historia.find_by(params[:id])
     if @historia.update(historia_params)
       render json: @historia
     else
@@ -27,7 +27,7 @@ class HistoriaController < ApplicationController
   end
 
   def destroy
-    @historia = Historia.find(params[:id])
+    @historia = Historia.find_by(params[:id])
     @historia.destroy
     head :no_content
   end
